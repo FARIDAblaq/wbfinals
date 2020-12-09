@@ -13,7 +13,6 @@ $dob = "";
 $dateemployed="";
 $address = "";
 $position ="";
-$user = "";
 $gender = "";
 $phone = "";
 $email = "";
@@ -25,7 +24,7 @@ $password = "";
 //checking if firstname has been set
 if(isset($_POST['name'])){
     $fname = $_POST['name'];
-    //echo $fname;
+    echo $fname;
 }else{
     echo nl2br("Error message! First name absent!\n");
     die();
@@ -34,7 +33,7 @@ if(isset($_POST['name'])){
 //checking if lastname has been set
 if(isset($_POST['lname'])){
     $lname = $_POST['lname'];
-    //echo $lname;
+    echo $lname;
 }else{
     echo nl2br("Error message! Last name absent!\n");
     die();
@@ -43,7 +42,7 @@ if(isset($_POST['lname'])){
 //checking if date of birth has been set
 if(isset($_POST['dob'])){
     $dob = $_POST['dob'];
-    //echo $lname;
+    echo $dob;
 }else{
     echo nl2br("Error message! Date of Birth absent!\n");
     die();
@@ -52,7 +51,7 @@ if(isset($_POST['dob'])){
 //checking if date employed has been set
 if(isset($_POST['date'])){
     $dateemployed = $_POST['date'];
-    //echo $lname;
+    echo $dateemployed;
 }else{
     echo nl2br("Error message! Date Employed absent!\n");
     die();
@@ -61,7 +60,7 @@ if(isset($_POST['date'])){
 //checking if gender has been set
 if(isset($_POST['select'])){
     $gender = $_POST['select'];
-    //echo $gender;
+    echo $gender;
 }else{
     echo nl2br("Error message! Gender absent!\n");
     die();
@@ -70,7 +69,7 @@ if(isset($_POST['select'])){
 //checking if phonenumber has been set
 if(isset($_POST['phone'])){
     $phone = $_POST['phone'];
-    //echo $phone;
+    echo $phone;
 }else{
     echo nl2br("Error message! Phone number absent!\n");
     die();
@@ -79,7 +78,16 @@ if(isset($_POST['phone'])){
 //checking if email has been set
 if(isset($_POST['email'])){
     $email = $_POST['email'];
-    //echo $email;
+    echo $email;
+}else{
+    echo nl2br("Error message! Email absent!\n");
+    die();
+}
+
+//checking if address has been set
+if(isset($_POST['address'])){
+    $address = $_POST['address'];
+    echo $address;
 }else{
     echo nl2br("Error message! Email absent!\n");
     die();
@@ -98,20 +106,31 @@ if(isset($_POST['select-1'])){
 //checking if password has been set and encrypting password
 if(isset($_POST['password'])){
     $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
-   // echo $password;
+    echo $password;
 }else{
     echo nl2br("Error message! password absent!\n");
     die();
 }
-
 $connection = new Connection();
-if($_POST['select-1'] == "Salesperson"){
-    $salesp = "insert into salesperson(Fname,Lname,Birthdate,DateEmployed,Sex,Email,Address,Telephone)
-    values ('$fname','$lname','$dob',$dateemployed','$gender','$email',$address','$phone')";
-    header("Location:./Staff.html");
+$d = "select * from staff ";
+if($connection->get_connection()->query($d)){
+    echo "okurr";
+    // header("Location:Staff.html");
 }else{
-    $insert = "insert into fashionconsultant(Fname,Lname,Birthdate,DateEmployed,Sex,Email,Address,Telephone)
-    values ('$fname','$lname','$dob',$dateemployed','$gender','$email',$address','$phone')";
-    header("Location:./Staff.html");
+    echo "not working";
 }
+$signupdetails = "INSERT INTO staff (Fname, Lname, Birthdate, DateEmployed, Sex, Email, Address, Telephone, Password)
+VALUES ( '$fname', '$lname', $dob, $dateemployed, '$gender', '$email', '$address', '$phone', '$password')";
+if ($connection->get_connection()->query($signupdetails)) {
+    //echo "New record created successfully";
+    header("Location: ./Staff.html");
+} else {
+    echo "Error: " . $signupdetails . "<br>" . $connection->error;
+}
+
+
+
+
+
+
 ?>
