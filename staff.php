@@ -114,42 +114,4 @@ if($_POST['select-1'] == "Salesperson"){
     values ('$fname','$lname','$dob',$dateemployed','$gender','$email',$address','$phone')";
     header("Location:./Staff.html");
 }
-// if($connection->get_connection()->query($salesp)||$connection->get_connection()->query($salesp)){
-//     header("Location:./Staff.html");
-// }else{
-//     echo "something went wrong";
-// }
-
-
-
-
-
-// //Connecting to database teamr.
-// //create a connection to the database
-// $conn = new mysqli($servername, $username, $dbpassword, $dbname);
-// // Check connection
-// if ($conn===false) {
-//     die("Connection failed: " . $conn->connect_error());
-// } else {
-//         echo "Connected Succesfully";
-// }
- 
-// //inserting values into database tables
-// $signupdetails = "INSERT INTO student (studentID, Fname, Lname, Username, Gender, Email, Password, Telphone, identity_no)
-// VALUES ('','$fname','$lname','$user','$gender','$email','$password', '$phone','$identity_no')";
-//   //checking if values were entered correctly
-// if ($conn->query($signupdetails) === TRUE) {
-//     //echo "New record created successfully";
-//     header("Location: ./studentloginform.php");
-// } else {
-//     echo "Error: " . $signupdetails . "<br>" . $conn->error;
-// }
-
-
-// //close connection to database
-//   $conn->close();
-
-
-
-
 ?>
