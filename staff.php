@@ -112,13 +112,6 @@ if(isset($_POST['password'])){
     die();
 }
 $connection = new Connection();
-$d = "select * from staff ";
-if($connection->get_connection()->query($d)){
-    echo "okurr";
-    // header("Location:Staff.html");
-}else{
-    echo "not working";
-}
 $signupdetails = "INSERT INTO staff (Fname, Lname, Birthdate, DateEmployed, Sex, Email, Address, Telephone, Password)
 VALUES ( '$fname', '$lname', $dob, $dateemployed, '$gender', '$email', '$address', '$phone', '$password')";
 if ($connection->get_connection()->query($signupdetails)) {
