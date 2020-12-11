@@ -12,14 +12,13 @@ else{
         
 }
  
-
 $connection = new Connection();
-$login_details = "SELECT * FROM staff WHERE Email =  '$email' ";
-$result = $connection->get_connection()->query($login_details);   
+$login_details = "SELECT * FROM staff WHERE Email =  '".$email."' ";
+$result = $connection->get_connection()->query($login_details);
+$row =$result->fetch_array();
+$m = $row['Email']; 
 if ($result) {
-    echo "Here";
-    $row = $connection->get_connection()->fetch_array($result);
-    if($row == $email && $password == "sales123"){
+    if($m == $email && $password == "sales123"){
         header("Location: ./Salespersonloginhomepage.html");
     }
 }
