@@ -73,7 +73,11 @@
                       </div>
                       <div class="u-form-group u-form-group-5">
                         <label for="text-90ff" class="u-label">Time </label>
-                        <input type="text" placeholder="Enter your time" id="text-90ff" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                        <input type="text" placeholder="Enter your time" id="text-90ff" name="time" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                      </div>
+                      <div class="u-form-group u-form-group-5">
+                        <label for="text-90ff" class="u-label">Date </label>
+                        <input type="date" placeholder="Enter the date" id="text-90ff" name="date" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                       </div>
                       <div class="u-form-group u-form-name u-form-group-6">
                         <label for="name-6335" class="u-label">Product id </label>
@@ -96,7 +100,7 @@
                       <input type="hidden" value="" name="recaptchaResponse">
                     </form>
                   </div>
-                  <a href="Salespersonloginhomepage.html#sec-51c3" data-page-id="2896712867" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">SUBMIT</a>
+                  <a href="Salespersonloginhomepage.php#sec-51c3" data-page-id="2896712867" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">SUBMIT</a>
                 </div>
               </div>
             </div>
