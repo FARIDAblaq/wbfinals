@@ -116,7 +116,7 @@ $signupdetails = "INSERT INTO staff (Fname, Lname, Birthdate, DateEmployed, Sex,
 VALUES ( '$fname', '$lname', $dob, $dateemployed, '$gender', '$email', '$address', '$phone', '$password')";
 if ($connection->get_connection()->query($signupdetails)) {
     //echo "New record created successfully";
-    header("Location: ./Staff.html");
+    header("Location: ./staffloginform.php");
 } else {
     echo "Error: " . $signupdetails . "<br>" . $connection->error;
 }

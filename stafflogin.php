@@ -21,6 +21,12 @@ if ($result) {
     if($m == $email && $password == "sales123"){
         header("Location: ./Salespersonloginhomepage.html");
     }
+    else if($m == $email && $password == "fashion123"){
+        header("Location: ./fashionconsultantloginpage.html");
+    }
+    else{
+        header("Location:staffloginform.php?error=emailerror");
+    }
 }
 
 
