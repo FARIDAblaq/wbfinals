@@ -83,14 +83,6 @@ if(isset($_POST['name-5'])){
     die();
 }
 
-//checking if phonenumber has been set
-if(isset($_POST['date'])){
-    $datebought = $_POST['date'];
-    echo $datebought;
-}else{
-    echo nl2br("Error message! Phone number absent!\n");
-    die();
-}
 
 //checking if email has been set
 if(isset($_POST['email'])){
@@ -106,13 +98,13 @@ if(isset($_POST['time'])){
     $time = $_POST['time'];
     echo $time;
 }else{
-    echo nl2br("Error message! Email absent!\n");
+    echo nl2br("Error message! time absent!\n");
     die();
 }
 
 $connection = new Connection();
-$salesdetails = "INSERT INTO salestable (Fname, Lname, Datebought, Producttype, Timebought,Productname, productid, customerfname, customeremail)
-VALUES ( '$salespersonfname', '$salespersonlname', $datebought, $prodcuttype, '$time', '$productname', '$productid', '$customername', '$customeremail')";
+$salesdetails = "INSERT INTO sales (Fname, Lname, Datebought, Producttype, Timebought, Productname, productid, Customername, customeremail)
+VALUES ( '$salespersonfname', '$salespersonlname', '$datebought', '$producttype', '$time', '$productname', '$productid', '$customername', '$customeremail')";
 if ($connection->get_connection()->query($salesdetails)) {
     //echo "New record created successfully";
     header("Location: ./staffloginform.php");

@@ -19,7 +19,7 @@ $row =$result->fetch_array();
 $m = $row['Email']; 
 if ($result) {
     if($m == $email && $password == "sales123"){
-        header("Location: ./Salespersonloginhomepage.html");
+        header("Location: ./Salespersonloginhomepage.php");
     }
     else if($m == $email && $password == "fashion123"){
         header("Location: ./fashionconsultantloginpage.html");

@@ -54,7 +54,7 @@
                     <div class="u-container-layout u-container-layout-3"></div>
                   </div>
                   <div class="u-expanded-width-sm u-expanded-width-xs u-form u-form-1">
-                    <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+                    <form action="sales.php" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form" redirect="true">
                       <div class="u-form-group u-form-name">
                         <label for="name-3119" class="u-label">First Name</label>
                         <input type="text" id="name-3119" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="" placeholder="Enter your First name">
@@ -73,21 +73,21 @@
                       </div>
                       <div class="u-form-group u-form-group-5">
                         <label for="text-90ff" class="u-label">Time </label>
-                        <input type="text" placeholder="Enter your time" id="text-90ff" name="time" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-                      </div>
-                      <div class="u-form-group u-form-group-5">
-                        <label for="text-90ff" class="u-label">Date </label>
-                        <input type="date" placeholder="Enter the date" id="text-90ff" name="date" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                        <input type="time" placeholder="Enter your time" id="text-90ff" name="time" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                       </div>
                       <div class="u-form-group u-form-name u-form-group-6">
                         <label for="name-6335" class="u-label">Product id </label>
                         <input type="text" placeholder="Productid " id="name-6335" name="name-4" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                       </div>
-                      <div class="u-form-group u-form-name u-form-group-7">
+                      <div class="u-form-date u-form-group u-form-group-7">
+                        <label for="date-0706" class="u-label">Date</label>
+                        <input type="date" placeholder="MM/DD/YYYY" id="date-0706" name="date" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                      </div>
+                      <div class="u-form-group u-form-name u-form-group-8">
                         <label for="name-2659" class="u-label">Customer name </label>
                         <input type="text" placeholder="Customer name " id="name-2659" name="name-5" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                       </div>
-                      <div class="u-form-email u-form-group u-form-group-8">
+                      <div class="u-form-email u-form-group u-form-group-9">
                         <label for="email-b46a" class="u-label">Customer email</label>
                         <input type="email" placeholder="Customer email" id="email-b46a" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                       </div>
@@ -100,7 +100,6 @@
                       <input type="hidden" value="" name="recaptchaResponse">
                     </form>
                   </div>
-                  <a href="Salespersonloginhomepage.php#sec-51c3" data-page-id="2896712867" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">SUBMIT</a>
                 </div>
               </div>
             </div>

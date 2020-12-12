@@ -38,7 +38,6 @@
   box-shadow: 5px 5px 26px 0 rgba(0,0,0,0.2);
   background-image: url("images/54e0d4454856a414f6da8c7dda793678153bdee757596c48732f7ddd9548c35eba_1280.png");
   background-position: 50% 50%;
-  height: auto;
   margin: 62px auto 0 -345px;
 }
 
@@ -344,7 +343,6 @@
 
 .u-section-3 .u-group-1 {
   min-height: 129px;
-  height: auto;
   margin-top: -623px;
   margin-bottom: 60px;
 }
