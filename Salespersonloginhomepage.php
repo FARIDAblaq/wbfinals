@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -119,38 +122,87 @@
               <col width="25%">
             </colgroup>
             <tbody class="u-table-body">
-              <tr style="height: 64px;">
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Column 1</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Column 2</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Column 3</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Column 4</td>
-              </tr>
-              <tr style="height: 65px;">
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Row 1</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-              </tr>
-              <tr style="height: 65px;">
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Row 2</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-              </tr>
-              <tr style="height: 65px;">
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Row 3</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-              </tr>
-              <tr style="height: 65px;">
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Row 4</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-              </tr>
-            </tbody>
-          </table>
+              <?php
+              include_once "conn.php";
+              $connection = new Connection();
+              $sql = "SELECT * FROM sales";
+              $result = $connection->get_connection()->query($sql);
+              // $row =$result->fetch_array();
+              if($result){
+                if($result->num_rows > 0){
+                  echo "<table>";
+                    echo "<tr>";
+                      echo "<th>Salesid</th>";
+                      echo "<th>SPfirst_name</th>";
+                      echo "<th>SPlast_name</th>";
+                      echo "<th>Date</th>";
+                      echo "<th>Time</th>"; 
+                      echo "<th>Productname</th>";
+                      echo "<th>Productid</th>";
+                      echo "<th>Producttype</th>";
+                      echo "<th>Customername</th>";
+                      echo "<th>Customeremail</th>";
+                    echo "</tr>";
+
+                  while($row =$result->fetch_array()){
+                    echo "<tr>";
+                      echo "<td>" . $row['salesid'] . "</td>";
+                      echo "<td>" . $row['Fname'] . "</td>";
+                      echo "<td>" . $row['Lname'] . "</td>";
+                      echo "<td>" . $row['Datebought'] . "</td>";
+                      echo "<td>" . $row['Timebought'] . "</td>";
+                      echo "<td>" . $row['Productname'] . "</td>";
+                      echo "<td>" . $row['productid'] . "</td>";
+                      echo "<td>" . $row['Producttype'] . "</td>";
+                      echo "<td>" . $row['Customername'] . "</td>";
+                      echo "<td>" . $row['customeremail'] . "</td>";
+                    echo "</tr>";
+                    // break;
+                  }
+                  echo "</table>";
+                  // Free result set
+                  // $result->free();
+                } else{
+                    echo "No records matching your query were found.";
+                }
+              } else{
+                echo "ERROR: Could not able to execute $sql. " . $connection->error;
+              }
+              // Close connection
+              // $connection->close();
+              ?>
+          //     <!-- <tr style="height: 64px;">
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Column 1</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Column 2</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Column 3</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Column 4</td>
+          //     </tr>
+          //     <tr style="height: 65px;">
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Row 1</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //     </tr>
+          //     <tr style="height: 65px;">
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Row 2</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //     </tr>
+          //     <tr style="height: 65px;">
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Row 3</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //     </tr>
+          //     <tr style="height: 65px;">
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Row 4</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
+          //     </tr>
+          //   </tbody>
+          // </table> -->
         </div>
       </div>
     </section>
@@ -167,7 +219,8 @@
             </div>
             <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-37 u-layout-cell-2">
               <div class="u-container-layout u-container-layout-2">
-                <h2 class="u-text u-text-1">Welcome!</h2>
+                <h2 class="u-text u-text-1">Welcome<?php
+                if(isset($_SESSION['s_email'])) echo $_SESSION['s_email']; ?>!</h2>
                 <p class="u-text u-text-2">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.</p>
                 <a href="https://nicepage.com/templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">EDIT PROFILE</a>
                 <a href="" class="u-btn u-button-style u-btn-3">UPLOAD IMAGE&nbsp;</a>
@@ -182,21 +235,8 @@
         </div>
       </div>
     </section>
-    
-    
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0c68"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">All rights reserved.&nbsp;</p>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Web Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="https://nicepage.com/" target="_blank">
-        <span>Website Design Software</span>
-      </a>. 
-    </section>
   </body>
 </html>
