@@ -15,7 +15,17 @@
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     
     
-    
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+    </style>
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -37,47 +47,9 @@
           </a>
         </div>
       </div></header>
-    <!-- <section class="u-clearfix u-section-1" id="sec-f985">
-
-       <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-23 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-37 u-layout-cell-2">
-                    <div class="u-container-layout u-container-layout-2">
-                      <h2 class="u-text u-text-1">Welcome!</h2>
-                      <p class="u-text u-text-2"> Kindly scroll down to see your bookings for the day!</p>
-                       <a href="signup.html" data-page-id="156718691" class="u-btn u-button-style u-btn-2">EDIT PROFILE<br>
-                      </a> 
-                       <a href="https://nicepage.com/html-templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3">UPLOAD IMAGE</a> 
-                    </div>
-                  </div>
-                   <div alt="" class="u-image u-image-circle u-image-1" src="" data-image-width="256" data-image-height="256"></div> 
-                  <a href="index.html" data-page-id="180418496" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-50 u-btn-1">LOG OUT<br>
-                  </a>
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-37 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <h2 class="u-text u-text-1">Welcome!</h2>
-                  <p class="u-text u-text-2"> Kindly scroll down to see your bookings for the day!</p>
-                   <a href="signup.html" data-page-id="156718691" class="u-btn u-button-style u-btn-2">EDIT PROFILE<br>
-                  </a> 
-                   <a href="https://nicepage.com/html-templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3">UPLOAD IMAGE</a> 
-                 </div>
-              </div> 
-            </div>
-          </div>
-        </div>
-      </div> 
-    </section> -->
     <section class="u-clearfix u-section-2" id="carousel_c879">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-1">BOOKINGS</h2>
-        <div class="u-expanded-width u-table u-table-responsive u-table-1">
-          <table class="u-table-entity u-table-entity-1">
             <colgroup>
               <col width="20%">
               <col width="20%">
@@ -85,54 +57,43 @@
               <col width="20%">
               <col width="20%">
             </colgroup>
-            <thead class="u-black u-custom-font u-heading-font u-table-header u-table-header-1">
-              <tr style="height: 45px;">
-                <th class="u-table-cell">Column 1</th>
-                <th class="u-table-cell">Column 2</th>
-                <th class="u-table-cell">Column 3</th>
-                <th class="u-table-cell">Column 4</th>
-                <th class="u-table-cell">Column 5</th>
-              </tr>
-            </thead>
-            <tbody class="u-table-body">
-              <tr style="height: 71px;">
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Item #1</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-              </tr>
-              <tr style="height: 71px;">
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Item #2</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-              </tr>
-              <tr style="height: 72px;">
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Item #3</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-              </tr>
-              <tr style="height: 72px;">
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Item #4</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-              </tr>
-              <tr style="height: 72px;">
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Item #5</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Description</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            <?php
+              include_once "conn.php";
+              $connection = new Connection();
+              $sql = "SELECT * FROM booking";
+              $result = $connection->get_connection()->query($sql);
+              // $row =$result->fetch_array();
+              if($result){
+                if($result->num_rows > 0){
+                  echo "<table>";
+                    echo "<tr>";
+                      echo "<th><b>NAME</b?</th>";
+                      echo "<th><b>EMAIL</b></th>";
+                      echo "<th><b>PHONE</b></th>";
+                      echo "<th><b>DATE<b></th>";
+                      echo "<th><b>TIME<b></th>"; 
+                    echo "</tr>";
+
+                  while($row =$result->fetch_array()){
+                    echo "<tr>";
+                      echo "<td>" . $row['Name'] . "</td>";
+                      echo "<td>" . $row['Email'] . "</td>";
+                      echo "<td>" . $row['Phone'] . "</td>";
+                      echo "<td>" . $row['Date'] . "</td>";
+                      echo "<td>" . $row['Time'] . "</td>";
+                    echo "</tr>";
+                    
+                  }
+                  echo "</table>";
+                } else{
+                    echo "No records matching your query were found.";
+                }
+              } else{
+                echo "ERROR: Could not able to execute $sql. " . $connection->error;
+              }
+              // Close connection
+              // $connection->close();
+              ?>
       </div>
     </section>
     

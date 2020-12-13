@@ -1,6 +1,4 @@
-<!-- <?php
-include('staffsession.php');
-?> -->
+
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -16,11 +14,8 @@ include('staffsession.php');
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.0.9, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    
-    
-    
-    
-    <script type="application/ld+json">{
+    <script type="application/ld+json">
+    {
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
@@ -171,15 +166,15 @@ include('staffsession.php');
               // Close connection
               // $connection->close();
               ?>
-              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-23 u-layout-cell-1">
-              <div class="u-container-layout u-container-layout-1">
-                <div alt="" class="u-image u-image-circle u-image-1" src="" data-image-width="256" data-image-height="256"></div>
-                <a href="index.html" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-50 u-btn-1">LOG OUT<br>
-                </a>
+
+              <a href="index.html" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-50 u-btn-1">LOG OUT<br>
+              </a>
               </div>
+            </section>
             </div>
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0c68"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">All rights reserved.&nbsp;</p>
-      </div></footer>
+      </div>
+    </footer>
   </body>
 </html>
