@@ -54,6 +54,13 @@
               <input type="submit" value="submit" class="u-form-control-hidden">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+            <?php 
+                  if(isset($_GET["error"])){
+                    if($_GET["error"] == "emailerror"){
+                      echo "Email or password incorrect!";
+                    }
+                  }
+            ?>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
             <input type="hidden" value="" name="recaptchaResponse">
           </form>

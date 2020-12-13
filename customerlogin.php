@@ -21,8 +21,9 @@ if ($result) {
     if($m == $email && $password == "customer001"){
         header("Location: ./customerloginhomepage.html");
     }
+    else{
+        header("Location:customerloginform.php?error=emailerror");
+    }
 }
-
-
 
 ?>
