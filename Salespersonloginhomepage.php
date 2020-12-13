@@ -1,6 +1,6 @@
-<?php
-session_start();
-?>
+<!-- <?php
+include('staffsession.php');
+?> -->
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -171,70 +171,13 @@ session_start();
               // Close connection
               // $connection->close();
               ?>
-          //     <!-- <tr style="height: 64px;">
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Column 1</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Column 2</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Column 3</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Column 4</td>
-          //     </tr>
-          //     <tr style="height: 65px;">
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Row 1</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //     </tr>
-          //     <tr style="height: 65px;">
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Row 2</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //     </tr>
-          //     <tr style="height: 65px;">
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Row 3</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //     </tr>
-          //     <tr style="height: 65px;">
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Row 4</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //       <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-          //     </tr>
-          //   </tbody>
-          // </table> -->
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-3" id="sec-46db">
-      <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-row">
-            <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-23 u-layout-cell-1">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-23 u-layout-cell-1">
               <div class="u-container-layout u-container-layout-1">
                 <div alt="" class="u-image u-image-circle u-image-1" src="" data-image-width="256" data-image-height="256"></div>
-                <a href="https://nicepage.com/website-mockup" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-50 u-btn-1">LOG OUT<br>
+                <a href="index.html" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-50 u-btn-1">LOG OUT<br>
                 </a>
               </div>
             </div>
-            <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-37 u-layout-cell-2">
-              <div class="u-container-layout u-container-layout-2">
-                <h2 class="u-text u-text-1">Welcome<?php
-                if(isset($_SESSION['s_email'])) echo $_SESSION['s_email']; ?>!</h2>
-                <p class="u-text u-text-2">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.</p>
-                <a href="https://nicepage.com/templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">EDIT PROFILE</a>
-                <a href="" class="u-btn u-button-style u-btn-3">UPLOAD IMAGE&nbsp;</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="u-container-style u-expanded-width u-group u-palette-1-base u-group-1">
-        <div class="u-container-layout u-container-layout-3">
-          <h2 class="u-heading-font u-subtitle u-text u-text-3">PROFILE</h2>
-        </div>
-      </div>
-    </section>
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0c68"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">All rights reserved.&nbsp;</p>
       </div></footer>

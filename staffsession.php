@@ -1,13 +1,21 @@
 <?php
+session_start();
 include_once "conn.php";
 $connection = new Connection();
 
-$s_email = "";
-$_SESSION['s_email'] = $s_email ;
+
+
+// $s_email = "";
+$s_email  = $_SESSION['s_email'] ;
 // $f_email = $_SESSION['f_email'];
 $query = "SELECT * FROM staff WHERE Email = '.$s_email'";
-$result = $connection->get_connection()->query($query);
-$row =$result->fetch_array();
+$results = $connection->get_connection()->query($query);
+$rows =$results->fetch_array();
+$loginemail= $rows['Email'];
+echo $loginemail;
+
+
+session_destroy();
 // $email = $row['Email'];
 // $sid = $row['Staffid'];
 // $fname = $row['Fname'];

@@ -37,14 +37,24 @@
           </a>
         </div>
       </div></header>
-    <section class="u-clearfix u-section-1" id="sec-f985">
-      <div class="u-clearfix u-sheet u-sheet-1">
+    <!-- <section class="u-clearfix u-section-1" id="sec-f985">
+
+       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-row">
               <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-23 u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
-                  <div alt="" class="u-image u-image-circle u-image-1" src="" data-image-width="256" data-image-height="256"></div>
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-37 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2">
+                      <h2 class="u-text u-text-1">Welcome!</h2>
+                      <p class="u-text u-text-2"> Kindly scroll down to see your bookings for the day!</p>
+                       <a href="signup.html" data-page-id="156718691" class="u-btn u-button-style u-btn-2">EDIT PROFILE<br>
+                      </a> 
+                       <a href="https://nicepage.com/html-templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3">UPLOAD IMAGE</a> 
+                    </div>
+                  </div>
+                   <div alt="" class="u-image u-image-circle u-image-1" src="" data-image-width="256" data-image-height="256"></div> 
                   <a href="index.html" data-page-id="180418496" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-50 u-btn-1">LOG OUT<br>
                   </a>
                 </div>
@@ -52,21 +62,20 @@
               <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-37 u-layout-cell-2">
                 <div class="u-container-layout u-container-layout-2">
                   <h2 class="u-text u-text-1">Welcome!</h2>
-                  <p class="u-text u-text-2">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.</p>
-                  <a href="signup.html" data-page-id="156718691" class="u-btn u-button-style u-btn-2">EDIT PROFILE<br>
-                  </a>
-                  <a href="https://nicepage.com/html-templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3">UPLOAD IMAGE</a>
-                </div>
-              </div>
+                  <p class="u-text u-text-2"> Kindly scroll down to see your bookings for the day!</p>
+                   <a href="signup.html" data-page-id="156718691" class="u-btn u-button-style u-btn-2">EDIT PROFILE<br>
+                  </a> 
+                   <a href="https://nicepage.com/html-templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3">UPLOAD IMAGE</a> 
+                 </div>
+              </div> 
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </div> 
+    </section> -->
     <section class="u-clearfix u-section-2" id="carousel_c879">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-1">BOOKINGS</h2>
-        <p class="u-text u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
         <div class="u-expanded-width u-table u-table-responsive u-table-1">
           <table class="u-table-entity u-table-entity-1">
             <colgroup>
@@ -127,7 +136,8 @@
       </div>
     </section>
     
-    
+    <a href="index.html" data-page-id="180418496" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-50 u-btn-1">LOG OUT<br>
+    </a>
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0c68"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">All rights reserved.&nbsp;</p>
       </div></footer>

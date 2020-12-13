@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "conn.php";
 $password = "";
 $email = "";
@@ -18,20 +19,20 @@ $row =$result->fetch_array();
 $m = $row['Email']; 
 if ($result) {
     if($m == $email && $password == "sales123"){
-        session_start();
+        
         $_SESSION['s_email'] = $email;
         header("Location: ./Salespersonloginhomepage.php");
     }
     else if($m == $email && $password == "fashion123"){
-        session_start();
+        // session_start();
         $_SESSION['f_email'] = $email;
-        header("Location: ./fashionconsultantloginpage.html");
+        header("Location: ./fashionconsultantloginpage.php");
     }
     else{
         header("Location:staffloginform.php?error=emailerror");
     }
 }
 
-
+session_destroy();
 
 ?>
