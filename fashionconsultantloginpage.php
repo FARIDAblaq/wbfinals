@@ -42,7 +42,7 @@
   <body class="u-body"><header class="u-clearfix u-gradient u-header u-valign-middle u-header" id="sec-d7e0"><div class="u-container-style u-custom-color-4 u-expanded-width u-group u-group-1">
         <div class="u-container-layout u-container-layout-1">
           <h1 class="u-text u-text-1">CONFI-COUTURE</h1>
-          <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="541" data-image-height="238">
+          <a href="" class="u-image u-logo u-image-1" data-image-width="541" data-image-height="238">
             <img src="images/Screenshot28.png" class="u-logo-image u-logo-image-1" data-image-width="213.1396">
           </a>
         </div>
@@ -62,10 +62,10 @@
               $connection = new Connection();
               $sql = "SELECT * FROM booking";
               $result = $connection->get_connection()->query($sql);
-              // $row =$result->fetch_array();
+              // checking if results query works accurately
               if($result){
                 if($result->num_rows > 0){
-                  echo "<table>";
+                  echo "<table>";    //printing database values into a table
                     echo "<tr>";
                       echo "<th><b>NAME</b?</th>";
                       echo "<th><b>EMAIL</b></th>";
@@ -91,8 +91,6 @@
               } else{
                 echo "ERROR: Could not able to execute $sql. " . $connection->error;
               }
-              // Close connection
-              // $connection->close();
               ?>
       </div>
     </section>

@@ -14,6 +14,18 @@
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.0.9, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+    </style>
     <script type="application/ld+json">
     {
 		"@context": "http://schema.org",
@@ -117,26 +129,25 @@
               <col width="25%">
             </colgroup>
             <tbody class="u-table-body">
-              <?php
+              <?php  //getting sales from database table
               include_once "conn.php";
               $connection = new Connection();
               $sql = "SELECT * FROM sales";
               $result = $connection->get_connection()->query($sql);
-              // $row =$result->fetch_array();
               if($result){
                 if($result->num_rows > 0){
                   echo "<table>";
                     echo "<tr>";
-                      echo "<th>Salesid</th>";
-                      echo "<th>SPfirst_name</th>";
-                      echo "<th>SPlast_name</th>";
-                      echo "<th>Date</th>";
-                      echo "<th>Time</th>"; 
-                      echo "<th>Productname</th>";
-                      echo "<th>Productid</th>";
-                      echo "<th>Producttype</th>";
-                      echo "<th>Customername</th>";
-                      echo "<th>Customeremail</th>";
+                      echo "<th><b>Salesid</b></th>";
+                      echo "<th><b>SPfirst_name</b></th>";
+                      echo "<th><b>SPlast_name</b></th>";
+                      echo "<th><b>Date</b></th>";
+                      echo "<th><b>Time</b></th>"; 
+                      echo "<th><b>Productname</b></th>";
+                      echo "<th><b>Productid</b></th>";
+                      echo "<th><b>Producttype</b></th>";
+                      echo "<th><b>Customername</b></th>";
+                      echo "<th><b>Customeremail</b></th>";
                     echo "</tr>";
 
                   while($row =$result->fetch_array()){

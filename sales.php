@@ -93,7 +93,7 @@ if(isset($_POST['email'])){
     die();
 }
 
-//checking if email has been set
+//checking if time has been set
 if(isset($_POST['time'])){
     $time = $_POST['time'];
     echo $time;
@@ -102,14 +102,14 @@ if(isset($_POST['time'])){
     die();
 }
 
-$connection = new Connection();
+$connection = new Connection();  //an instance of the connection class
 $salesdetails = "INSERT INTO sales (Fname, Lname, Datebought, Producttype, Timebought, Productname, productid, Customername, customeremail)
-VALUES ( '$salespersonfname', '$salespersonlname', '$datebought', '$producttype', '$time', '$productname', '$productid', '$customername', '$customeremail')";
+VALUES ( '$salespersonfname', '$salespersonlname', '$datebought', '$producttype', '$time', '$productname', '$productid', '$customername', '$customeremail')";  //query for inserting to the staff table
 if ($connection->get_connection()->query($salesdetails)) {
     //echo "New record created successfully";
     header("Location: ./staffloginform.php");
 } else {
-    echo "Error: " . $salesdetails . "<br>" . $connection->error;
+    echo "Error: " . $salesdetails . "<br>" . $connection->error;  //shows error if details are incorrect
 }
 
 
